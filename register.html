@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="./static/styles/bootstrap.min.css">
+        <script src="/static/scripts/bootstrap.min.js"></script>
+    <title>Login</title>
+    <style>
+       h1{
+           margin-top: 50px;
+       }
+    </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1><center>Register to web app</center></h1>
+                </div>
+            </div>
+            <br>
+        <div class="row justify-content-center">
+        <div class="col-sm-4">
+        <form action="register.php" method="POST" enctype="multipart/form-data">
+            First Name
+            <br>
+                <input class = "form-control" type="text" name="fname">
+            <br>
+            Last Name
+            <br>
+                <input class = "form-control" type="text" name="lname">
+            <br>
+            Gender
+            <br>
+                <select name = "gender" class="form-control">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="none">Rather not say</option>
+                </select>
+            <br>
+            Status
+            <br>
+                <input class = "form-control" type="text" name="status">
+            <br>
+            Email
+            <br>
+                <input class = "form-control" type="text" name="email">
+            <br>
+            Password
+            <br>
+                <input class = "form-control" type="password" name="pass">
+            <br>
+            Confirm password
+            <br>
+                <input class = "form-control" type="password" name="passconfirm">
+            <br>
+            <center>
+            <h5><b>Profile picture</b></h5> 
+            <label for="profileimg">
+                    <img src="upload.png" height="150px"/>
+            </label>
+            <input type="file" name="image" id="profileimg" accept="image/*" style="display: none">
+        </center>
+            <br>
+            <br>
+            <center><button class="btn btn-primary" type="submit">Submit</button><br><br><br>
+            </center>
+          </form> 
+          </div>
+        </div>
+                
+        
+    </div>
+    </body>
+    </html>

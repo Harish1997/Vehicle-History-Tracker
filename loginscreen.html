@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="./static/styles/bootstrap.min.css">
+        <script src="/static/scripts/bootstrap.min.js"></script>
+    <title>Login</title>
+    <style>
+       h1{
+           margin-top: 100px;
+       }
+    </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1><center>Fill in your credentials</center></h1>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+        <div class="row justify-content-center">
+        <div class="col-sm-4">
+        <form action="auth.php" method="POST">
+            Email:<br>
+            <input class = "form-control" type="text" name="email">
+            <br>
+            Password:<br>
+            <input class = "form-control" type="password" name="pass">
+            <br><br>
+            <center><button class="btn btn-primary" type="submit">Submit</button><br><br><br>
+                <a href="register.html">Don't have an account? Click here to sign up!</a>
+            </center>
+          </form> 
+          </div>
+        </div>
+                
+        
+    </div>
+    </body>
+    </html>

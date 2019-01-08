@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="./static/styles/bootstrap.min.css">
+        <script src="/static/scripts/bootstrap.min.js"></script>
+    <title>Product</title>
+    <style>
+       h1{
+           margin-top: 50px;
+       }
+    </style>
+    </head>
+    <body>
+        <div class="container">
+            <br><br><br>
+                <div class="row">
+                        <div class="col-sm-12">
+                            <center>
+                                    <div class="row justify-content-center">
+                                            <div class="col-sm-4">
+                                            <form action="product.php" method="POST">
+                                                <input type="hidden" name="type" value="display">
+                                                <center><button class="btn btn-primary" type="display">Display all items</button><br><br><br>
+                                                </center>
+                                              </form> 
+                                              </div>
+                                            </div>
+                            </center>
+                        </div>
+                    </div>
+                    <br>
+                    <hr>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1><center>Enter the details of the product to add</center></h1>
+                </div>
+            </div>
+            <br>
+        <div class="row justify-content-center">
+        <div class="col-sm-4">
+        <form action="product.php" method="POST">
+            Product Name
+            <br>
+                <input class = "form-control" type="text" name="pname">
+            <br>
+            Description
+            <br>
+                <input class = "form-control" type="text" name="desc">
+            <br>
+            Status
+            <br>
+                <input class = "form-control" type="text" name="status">
+            <br>
+            <input type="hidden" name="type" value="add">
+            <br>
+            <br>
+            <center><button class="btn btn-primary" type="submit">Add</button><br><br><br>
+            </center>
+          </form> 
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+                <div class="col-sm-12">
+                    <h1><center>Enter the details of the product to update</center></h1>
+                </div>
+            </div>
+            <br>
+        <div class="row justify-content-center">
+                <div class="col-sm-4">
+                <form action="product.php" method="POST">
+                        ID
+                        <br>
+                            <input class = "form-control" type="text" name="id">
+                        <br>
+                    Product Name
+                    <br>
+                        <input class = "form-control" type="text" name="pname">
+                    <br>
+                    Description
+                    <br>
+                        <input class = "form-control" type="text" name="desc">
+                    <br>
+                    Status
+                    <br>
+                        <input class = "form-control" type="text" name="status">
+                    <br>
+                    <input type="hidden" name="type" value="update">
+                    <br>
+                    <br>
+                    <center><button class="btn btn-primary" type="submit">Update</button><br><br><br>
+                    </center>
+                  </form> 
+                  </div>
+                </div>
+                <hr>
+
+                <div class="row">
+                        <div class="col-sm-12">
+                            <h1><center>Enter the details of the product to delete</center></h1>
+                        </div>
+                    </div>
+                    <br>
+                <div class="row justify-content-center">
+                        <div class="col-sm-4">
+                        <form action="product.php" method="POST">
+                            ID
+                            <br>
+                                    <input class = "form-control" type="text" name="id">
+                            <br>
+                            <input type="hidden" name="type" value="delete">
+                            <br>
+                            <center><button class="btn btn-primary" type="submit">Delete</button><br><br><br>
+                            </center>
+                          </form> 
+                          </div>
+                        </div>
+                <hr>
+        
+    </div>
+    </body>
+    </html>
