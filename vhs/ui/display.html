@@ -1,0 +1,86 @@
+<html>
+<head><center><h1>Vehicle History Tracker</h1></center></head>
+<style type="text/css">
+	<style>
+#vehicle {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#vehicle td, #vehicle th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#vehcile tr:nth-child(even){background-color: #f2f2f2;}
+
+#vehicle tr:hover {background-color: #ddd;}
+
+#vehicle th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script src="static/scripts/jquery-3.3.1.min.js"></script>
+<title>VHS</title>
+<script>
+    $(document).ready(function(){
+        var key=sessionStorage.getItem('key');
+        $('#vhs_id').text(key);
+        $.get("http://localhost:5000/api/vehicle/"+key,{},function(result){
+        	console.log(result[0]['']);
+        });
+        
+    });
+</script>
+<body>
+    <h2>Your VIN number is <span id="vhs_id"></span></h2>
+    <h2>Manufacturer name : </h2>
+    <h2>Model Name : </h2>
+    <h2>Year of manufacturing : </h2>
+    <h2>Displacement : </h2>
+    <h2>Vehicle type : </h2>
+    <hr>
+    <h1><center>Registration Details</center></h1>
+    <center>
+    <table id="vehicle">
+    <th>Registration Number</th>
+    <th>Date of registration</th>
+    <th>RTO ID</th>
+    <th>Vehicle Color</th>
+	</table>
+</center>
+    <hr>
+    <h1><center>Vehicle insurance details</center></h1>
+    <center>
+    <table id="vehicle">
+    <th>Insurance company</th>
+    <th>Insurance number</th>
+    <th>Validity period</th>
+</table>
+</center>
+<hr>
+    <h1><center>Insurance claim details</center></h1>
+    <center>
+    <table id="vehicle">
+    	<thead>
+    	<th>Insurance number</th>
+    	<th>Claim date</th>
+    	<th>Claim type</th>
+    	<th>Description</th>
+    	<th>Estimated cost</th>
+    	<th>Claim status</th>
+    	</thead>
+    	<tbody id="content">
+    		
+    	</tbody>
+    </table>
+</center>
+</body>
+</html>
