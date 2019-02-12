@@ -1,0 +1,425 @@
+<html>
+<head></head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Kalam' rel='stylesheet'>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<style>
+body{
+    padding: unset;
+    margin: unset;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    margin: unset;
+    padding: unset;
+}
+.navigation{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    box-sizing: border-box;
+    background-color: black;
+}
+.content{
+    width: 100%;
+    height: 90vh;
+    box-sizing: border-box;
+}
+.pane{
+    width: 20%;
+    height: 100%;
+    border-right: 1px solid blue;
+    box-sizing: border-box;
+    display: inline-block;
+    background-color: #0a0a0a;
+    vertical-align: top;
+}
+
+.pane-content{
+    height:100%;
+    width: 79%;
+    overflow: scroll;
+    overflow-x: hidden;
+    display: inline-block;
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+.top-nav{
+    width: 100%;
+    position: relative;
+}
+
+.vhs-title{
+    width: 20%;
+    height: 100%;
+    padding: 10px;
+    margin-left: 2%;
+    display: inline-block;
+    
+}
+h4{
+    color: white;
+    position: relative;
+    transform: translateY(-50%);
+     font-family: 'Kalam';font-size: 22px;
+}
+
+.searcher{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+}
+input{
+    width: 80%;
+    height: 60%;
+    margin-top: 2%;
+    margin-left: 8%;
+    border: none;
+    border-radius: 25px;
+    padding-left: 20px;
+    font-size: 20px;
+    outline: none;
+}
+.search-button{
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    background-color: #1976D2;
+    border: none;
+    position: absolute;
+    left: 82%;
+    top:6%;
+}
+.fa-search{
+    color: white;
+    font-size: 20px;
+}
+.nav-list{
+    color: white;
+    list-style-type: none;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    box-sizing: border-box;
+}
+.help-tab{
+    display: inline-block;
+    vertical-align: top;
+    width: 6%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    padding-left: 5px;
+}
+.fa-hands-helping{
+    color: #FFA000;
+    margin-top: 7%;
+    font-size: 38px;
+    margin-left: 8%;
+
+}
+.nav-list-item{
+    width: 100%;
+    padding:20px 30px;
+    border-bottom: 2px solid #FFA000;
+    font-size: 20px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    position: relative;
+}
+.nav-list-item:hover{
+    background-color: #212121;
+}
+
+.fa-plus{
+    position: absolute;
+    right: 5;
+    font-size: 15px;
+    margin-top: 4px;
+}
+.fas{
+    margin-right: 5px;
+}
+h6{
+    font-size: 14px;
+    margin: unset;
+    color: #FFA000;
+}
+
+.fa-tachometer-alt{
+    color: #F9A825;
+}
+.fa-clipboard-list{
+    color:#64DD17;
+}
+.fa-tools{
+    color: #03A9F4;
+}
+.fa-exclamation-triangle{
+    color: #FF5722;
+}
+.fa-users{
+    color: #E040FB;
+}
+
+.mycontent{
+    width:95%;
+    height: 60%;
+    background-color: #f7f7f7;
+    margin-top: 20px;
+    margin-left: 30px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.car-image{
+    position: absolute;
+    right: 3;
+    width: 40%;
+    height: 78%;
+    border-radius: 5px;
+    display: inline-block;
+}
+.img-round-corners{
+    border-radius: 20px;
+    opacity: 0.85;
+    border-top-right-radius:unset;
+    border-bottom-right-radius: unset;
+}
+.img-round-corners:hover{
+    opacity: 1;
+}
+.content-title{
+    border-bottom: 2px solid #42A5F5;
+    box-sizing: border-box;
+    width: 100%;
+}
+.heading-vehicle-details{
+    padding-top: 15px;
+    padding-left: 10px;
+}
+.car-desc{
+display: inline-block;
+width:60%;
+height:78%;
+box-sizing: border-box;
+padding: 10px;
+}
+
+.vehicle-vin-label{
+    font-size: 26px;
+    font-family: lato;
+    margin: 20px;
+    margin-bottom: unset;
+    font-weight: bold;
+    color: #1e5384;
+    display: inline-block;
+}
+
+.vehicle-sub-label{
+    font-size: 18px;
+    font-family: lato;
+    margin: 10px;
+    color: #1e5384;
+    display: inline-block;
+    width: 50%;
+}
+.desc-holder{
+    width: 98%;
+    border-bottom: 1px solid #bababa;
+    box-sizing: border-box;
+    padding-bottom: 2px;
+    margin-right: 20px;
+    margin-right: 30px;
+    box-sizing: border-box;
+}
+.forvin{
+    width: 100%;
+}
+.vehicle-logo{
+    width: 100%;
+    height: 25%;
+    display: block;
+    position: relative;
+}
+.sub{
+    margin-top: 5px;
+}
+.vehicle-vin{
+    font-size: 24px;
+    font-family: lato;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.vehicle-sub{
+    font-size: 17px;
+    font-family: lato;
+    display: inline-block;
+}
+.vin{
+    margin-bottom: 20px;
+    border: none;
+    width: 100%; 
+}
+
+.car-logo-img{
+    width: 15%;
+    height: 100%;
+    color: white;
+position: absolute;
+left: 40%;
+}
+
+.pane-content-holder{
+}
+
+.half-width-holder{
+    width: 48%;
+    display: inline-block;
+}
+.second{
+    padding:20px;
+    box-sizing: border-box;
+}
+</style>
+<body>
+<div class="container">
+   <div class="navigation">
+    <nav class="top-nav">
+        <div class="vhs-title"><h4>Vehicle History Tracker</h4></div>
+        <div class="searcher">
+            <input type="text" id="vin" name="vin" placeholder="Enter your VIN">
+            <button class="search-button" onclick="search()"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="help-tab">
+            <i class="fas fa-hands-helping"></i>
+            <h6>Help Center</h6>
+        </div>
+    </nav>
+   </div>
+    <div class="content">
+        <div class="pane">
+            <ul class="nav-list">
+                <li class="nav-list-item"><i class="fas fa-tachometer-alt"></i> Dashboard</li>
+                <li class="nav-list-item"><i class="fas fa-clipboard-list"></i> Registration <i class="fas fa-plus"></i></li>
+                <li display="none"></li>
+                <li class="nav-list-item"><i class="fas fa-users"></i> Owners</li>
+                <li class="nav-list-item"><i class="fas fa-tools"></i> Service <i class="fas fa-plus"></i></li>
+                <li class="nav-list-item"><i class="fas fa-exclamation-triangle"></i> Federal Records <i class="fas fa-plus"></i></li>
+            </ul> 
+        </div>
+        <div class="pane-content">
+            <div class="pane-content-holder">
+                <div class="vehicle-logo">
+                    <img class="car-logo-img" src="http://www.cromevent.com/wp-content/uploads/2016/08/suzuki-eps-vector-logo-400x400.png">
+                </div>
+                <div class="mycontent">
+                    <div class="content-title">
+                        <h1 class="heading-vehicle-details">Vehicle details</h1>
+                    </div>
+                    <div class="car-desc">
+                        <div class="desc-holder vin">
+                            <div class="vehicle-vin-label">VIN</div>
+                            <div class="vehicle-vin" id="vin">WP0ZZZ99ZTS392124</div>
+                        </div>
+                        <div class="half-width-holder">
+                            <div class="desc-holder sub">
+                                <div class="vehicle-sub-label"><i class="fas fa-check-square"></i> Model</div><div class="vehicle-sub" id="v-type">Swift Type 1</div>
+                            </div>
+                            <div class="desc-holder sub">
+                                <div class="vehicle-sub-label"><i class="fas fa-car-side"></i> Body Type</div><div class="vehicle-sub" id="v-type">Hatchback</div>
+                            </div>
+                            <div class="desc-holder sub">
+                                <div class="vehicle-sub-label"><i class="fas fa-gas-pump"></i> Fuel Type</div><div class="vehicle-sub" id="v-type">Petrol</div>
+                            </div>
+                            <div class="desc-holder sub">
+                                <div class="vehicle-sub-label"><i class="fas fa-cog"></i> Engine capacity</div><div class="vehicle-sub" id="v-type">1300cc</div>
+                            </div>
+                        </div>
+                        <div class="half-width-holder">
+                            <div class="desc-holder sub">
+                                <div class="vehicle-sub-label"><i class="far fa-calendar-alt"></i> Period</div><div class="vehicle-sub" id="v-type">2005-2008</div>
+                            </div>
+                            <div class="desc-holder sub">
+                                <div class="vehicle-sub-label"><i class="fas fa-car-alt"></i> Engine power</div><div class="vehicle-sub" id="v-type">84 Bhp</div>
+                            </div>
+                            <div class="desc-holder sub">
+                                <div class="vehicle-sub-label"><i class="fab fa-buromobelexperte"></i> Model Variant</div><div class="vehicle-sub" id="v-type">zxi</div>
+                            </div>
+                            <div class="desc-holder sub">
+                                <div class="vehicle-sub-label"><i class="fas fa-user"></i> No of Owners</div><div class="vehicle-sub" id="v-type">3</div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="car-image">
+                    <img class="img-round-corners" src="https://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/NgEAAOSwVF1aNR3h/$_86.JPG" width="100%" height="100%">
+                </div>
+           </div>
+           <div class="mycontent second">
+               <div class="half-width-holder">
+                            <div class="desc-holder sub">
+                                <div class="vehicle-sub-label">Number of cylinders</div><div class="vehicle-sub" id="v-type">4</div>
+                            </div>
+                            <div class="desc-holder sub">
+                                <div class="vehicle-sub-label">Number of Gears</div><div class="vehicle-sub" id="v-type">5+1</div>
+                            </div>
+                            <div class="desc-holder sub">
+                                <div class="vehicle-sub-label">Gearbox type</div><div class="vehicle-sub" id="v-type">Manual</div>
+                            </div>
+                            <div class="desc-holder sub">
+                                <div class="vehicle-sub-label">Year of Production</div><div class="vehicle-sub" id="v-type">2005</div>
+                            </div>
+                            <div class="desc-holder sub">
+                                <div class="vehicle-sub-label">Axle style</div><div class="vehicle-sub" id="v-type">FWD</div>
+                            </div>
+                            <div class="desc-holder sub">
+                                <div class="vehicle-sub-label">Engine type</div><div class="vehicle-sub" id="v-type">1.3 DDIS</div>
+                            </div>
+                            <div class="desc-holder sub">
+                                <div class="vehicle-sub-label">No of doors</div><div class="vehicle-sub" id="v-type">5</div>
+                            </div>
+               </div>
+               <div class="half-width-holder">
+                    <div class="desc-holder sub">
+                                <div class="vehicle-sub-label">Insurance status</div><div class="vehicle-sub" id="v-type">Current</div>
+                            </div>
+                            <div class="desc-holder sub">
+                                <div class="vehicle-sub-label">Engine power</div><div class="vehicle-sub" id="v-type">84 Bhp</div>
+                            </div>
+                            <div class="desc-holder sub">
+                                <div class="vehicle-sub-label">Model Variant</div><div class="vehicle-sub" id="v-type">zxi</div>
+                            </div>
+                            <div class="desc-holder sub">
+                                <div class="vehicle-sub-label">No of Owners</div><div class="vehicle-sub" id="v-type">3</div>
+                            </div>
+                   <div class="desc-holder sub">
+                                <div class="vehicle-sub-label">Production period</div><div class="vehicle-sub" id="v-type">2005-2008</div>
+                            </div>
+                            <div class="desc-holder sub">
+                                <div class="vehicle-sub-label">Engine power</div><div class="vehicle-sub" id="v-type">84 Bhp</div>
+                            </div>
+                            <div class="desc-holder sub">
+                                <div class="vehicle-sub-label">Model Variant</div><div class="vehicle-sub" id="v-type">zxi</div>
+                            </div>
+               </div>
+           </div>
+       </div>
+       </div>
+   </div>
+</div>
+</body>
+</html>
